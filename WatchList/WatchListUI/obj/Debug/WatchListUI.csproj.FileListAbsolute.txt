@@ -1,0 +1,7 @@
+F:\Arun\My_Projects\WatchList\WatchList\WatchListUI\bin\TypeScriptHTMLApp1.dll.config
+F:\Arun\My_Projects\WatchList\WatchList\WatchListUI\bin\TypeScriptHTMLApp1.dll
+F:\Arun\My_Projects\WatchList\WatchList\WatchListUI\bin\TypeScriptHTMLApp1.pdb
+F:\Arun\My_Projects\WatchList\WatchList\WatchListUI\obj\Debug\WatchListUI.csprojAssemblyReference.cache
+F:\Arun\My_Projects\WatchList\WatchList\WatchListUI\obj\Debug\WatchListUI.csproj.CoreCompileInputs.cache
+F:\Arun\My_Projects\WatchList\WatchList\WatchListUI\obj\Debug\TypeScriptHTMLApp1.dll
+F:\Arun\My_Projects\WatchList\WatchList\WatchListUI\obj\Debug\TypeScriptHTMLApp1.pdb
