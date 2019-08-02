@@ -17,7 +17,7 @@ CREATE PROCEDURE [dbo].[GetAuthData]
 @pass nvarchar(10)
 AS
 BEGIN
-	SELECT * FROM [dbo].[UserAuthData] WHERE uid=@uid and password=@pass
+	SELECT 1 as IsAllowed FROM [dbo].[UserAuthData] WHERE uid=@uid and password=@pass
 END
 GO
 
