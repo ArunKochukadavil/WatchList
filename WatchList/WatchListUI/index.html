@@ -1,12 +1,31 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Login</title>
     <meta charset="utf-8" />
     <title>TypeScript HTML App</title>
-    <link rel="stylesheet" href="app.css" type="text/css" />
+    <link rel="stylesheet" href="index.css" type="text/css" />
     <script src="app.js"></script>
-    This is just as test code for learning how to stage file
 </head>
 <body>
+    <h1 id="headerTag">Welcome to WatchList</h1>
+    <p id="desc"><i>The one stop destination to store all the <u style="color: red;">last watch history</u></i></p>
+    <form method="post" action="">
+        <h1>Login Panel</h1><span><hr></span>
+        <table id="loginTable">
+            <tr>
+                <td><label for="username" id="user1" >Username:</label></td>
+                <td><input type="text" name="username" placeholder="Email Id" id="uid"></td>
+            </tr>
+            <tr>
+                <td><label for="password" >Password:</label></td>
+                <td><input type="password" name="password" placeholder="Password" id="pass"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" name="Login" value="Login"></td>
+            </tr>
+        </table>
+    </form>
 </body>
 </html>
