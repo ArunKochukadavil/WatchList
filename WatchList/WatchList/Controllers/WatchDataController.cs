@@ -8,6 +8,11 @@ namespace WatchList.Controllers
     [RoutePrefix("WatchData")]
     public class WatchDataController : ApiController
     {
+        /// <summary>
+        /// for getting watch list data for the specified user
+        /// </summary>
+        /// <param name="uid">UserID</param>
+        /// <returns></returns>
         [Route("Get")]
         [HttpGet]
         public IHttpActionResult GetWatchData(string uid)
