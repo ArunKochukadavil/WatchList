@@ -4,11 +4,11 @@ GO
 ALTER TABLE [dbo].[WatchData] DROP CONSTRAINT [FK__WatchData__uid__693CA210]
 GO
 
-/****** Object:  Table [dbo].[WatchData]    Script Date: 02-08-2019 19:07:24 ******/
+/****** Object:  Table [dbo].[WatchData]    Script Date: 04-08-2019 01:00:34 ******/
 DROP TABLE [dbo].[WatchData]
 GO
 
-/****** Object:  Table [dbo].[WatchData]    Script Date: 02-08-2019 19:07:24 ******/
+/****** Object:  Table [dbo].[WatchData]    Script Date: 04-08-2019 01:00:34 ******/
 SET ANSI_NULLS ON
 GO
 
@@ -29,6 +29,9 @@ CREATE TABLE [dbo].[WatchData](
 	[Status] [varchar](10) NOT NULL,
 	[CreationTime] [datetime] NOT NULL,
 	[ModificationTime] [datetime] NOT NULL,
+	[reviews] [tinyint] NULL,
+	[description] [text] NULL,
+	[downloadLinks] [text] NULL,
 PRIMARY KEY CLUSTERED 
 (
 	[id] ASC
