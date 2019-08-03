@@ -15,7 +15,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WatchListDTOs", "WatchListD
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DBScripts", "DBScripts", "{3B6719E3-2B4C-4AF6-9AB0-AEF9FA7F46E5}"
 	ProjectSection(SolutionItems) = preProject
-		AddOrUpdateWatchList.sql = AddOrUpdateWatchList.sql
+		dbo.AddOrUpdateWatchList.sql = dbo.AddOrUpdateWatchList.sql
+		dbo.CreateTvWebAnimeProgressDB.sql = dbo.CreateTvWebAnimeProgressDB.sql
+		dbo.CreateUser.sql = dbo.CreateUser.sql
+		dbo.CreateUserAuthdata.sql = dbo.CreateUserAuthdata.sql
+		dbo.CreateWatchDataTable.sql = dbo.CreateWatchDataTable.sql
+		dbo.GetAuthData.sql = dbo.GetAuthData.sql
+		dbo.GetWatchData.sql = dbo.GetWatchData.sql
+		dbo.UpdateLoginData.sql = dbo.UpdateLoginData.sql
 	EndProjectSection
 EndProject
 Global
