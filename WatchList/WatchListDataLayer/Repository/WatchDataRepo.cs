@@ -43,7 +43,10 @@ namespace WatchListDataLayer.Repository
                         Season = data.GetByte(data.GetOrdinal(Constants.WatchData.Season)),
                         TotalEpisodes = data.GetInt32(data.GetOrdinal(Constants.WatchData.TotalEpisodes)),
                         EpisodesCompleted = data.GetInt32(data.GetOrdinal(Constants.WatchData.EpisodesCompleted)),
-                        Status = data.GetString(data.GetOrdinal(Constants.WatchData.Status))
+                        Status = data.GetString(data.GetOrdinal(Constants.WatchData.Status)),
+                        Reviews = data.GetByte(data.GetOrdinal(Constants.WatchData.Reviews)),
+                        Description = data.GetString(data.GetOrdinal(Constants.WatchData.Description)),
+                        DownloadLinks = data.GetString(data.GetOrdinal(Constants.WatchData.DownloadLinks))
                     });
                 }
                 data.Close();

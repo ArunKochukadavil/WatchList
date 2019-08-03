@@ -20,6 +20,9 @@ namespace WatchListDataLayer
             public static readonly string Status = "Status";
             public static readonly string CreationTime = "CreationTime";
             public static readonly string ModificationTime = "ModificationTime";
+            public static readonly string Reviews = "reviews";
+            public static readonly string Description = "description";
+            public static readonly string DownloadLinks = "downloadLinks";
         } 
 
         public static class UserAuthData
