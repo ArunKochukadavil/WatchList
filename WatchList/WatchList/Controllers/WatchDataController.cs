@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Web.Http;
+using WatchList.AuthHandler;
 using WatchListBiz;
 using WatchListDTOs;
 
@@ -14,6 +15,7 @@ namespace WatchList.Controllers
         /// <param name="uid">UserID</param>
         /// <returns></returns>
         [Route("Get")]
+        [UserAuthCheck]
         [HttpGet]
         public IHttpActionResult GetWatchData(string uid)
         {
