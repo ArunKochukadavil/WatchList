@@ -46,5 +46,3 @@ GO
 ALTER TABLE [dbo].[WatchData]  WITH CHECK ADD FOREIGN KEY([uid])
 REFERENCES [dbo].[UserAuthData] ([uid])
 GO
-
-

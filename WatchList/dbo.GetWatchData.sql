@@ -32,5 +32,3 @@ BEGIN
   where uid=@uid
 END
 GO
-
-

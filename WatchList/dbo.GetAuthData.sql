@@ -20,5 +20,3 @@ BEGIN
 	SELECT 1 as IsAllowed FROM [dbo].[UserAuthData] WHERE uid=@uid and password=@pass
 END
 GO
-
-

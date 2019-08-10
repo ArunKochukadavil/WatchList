@@ -23,5 +23,3 @@ BEGIN
 	UPDATE [dbo].[UserAuthData] SET lastLoginTime=@LastChangeDate, isLoggedIn=@status;
 END
 GO
-
-

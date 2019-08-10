@@ -26,5 +26,3 @@ CREATE TABLE [dbo].[UserAuthData](
 ) ON [PRIMARY]
 
 GO
-
-

@@ -25,5 +25,3 @@ BEGIN
 	END
 END
 GO
-
-
