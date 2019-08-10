@@ -68,3 +68,14 @@ F:\Arun\My_Projects\WatchList\WatchList\WatchList\obj\Debug\WatchListAPI.csproj.
 F:\Arun\My_Projects\WatchList\WatchList\WatchList\obj\Debug\WatchListAPI.csproj.CopyComplete
 F:\Arun\My_Projects\WatchList\WatchList\WatchList\obj\Debug\WatchList.dll
 F:\Arun\My_Projects\WatchList\WatchList\WatchList\obj\Debug\WatchList.pdb
+F:\Arun\My_Projects\WatchList\WatchList\WatchList\bin\microsoft.identitymodel.dll
+F:\Arun\My_Projects\WatchList\WatchList\WatchList\bin\Microsoft.IdentityModel.JsonWebTokens.dll
+F:\Arun\My_Projects\WatchList\WatchList\WatchList\bin\Microsoft.IdentityModel.Logging.dll
+F:\Arun\My_Projects\WatchList\WatchList\WatchList\bin\Microsoft.IdentityModel.Tokens.dll
+F:\Arun\My_Projects\WatchList\WatchList\WatchList\bin\System.IdentityModel.Tokens.Jwt.dll
+F:\Arun\My_Projects\WatchList\WatchList\WatchList\bin\Microsoft.IdentityModel.JsonWebTokens.pdb
+F:\Arun\My_Projects\WatchList\WatchList\WatchList\bin\Microsoft.IdentityModel.JsonWebTokens.xml
+F:\Arun\My_Projects\WatchList\WatchList\WatchList\bin\Microsoft.IdentityModel.Logging.xml
+F:\Arun\My_Projects\WatchList\WatchList\WatchList\bin\Microsoft.IdentityModel.Tokens.xml
+F:\Arun\My_Projects\WatchList\WatchList\WatchList\bin\System.IdentityModel.Tokens.Jwt.pdb
+F:\Arun\My_Projects\WatchList\WatchList\WatchList\bin\System.IdentityModel.Tokens.Jwt.xml

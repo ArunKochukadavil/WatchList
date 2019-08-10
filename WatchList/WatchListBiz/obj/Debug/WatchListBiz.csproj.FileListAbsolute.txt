@@ -1,5 +1,6 @@
 F:\Arun\My_Projects\WatchList\WatchList\WatchListBiz\bin\Debug\WatchListBiz.dll
 F:\Arun\My_Projects\WatchList\WatchList\WatchListBiz\bin\Debug\WatchListBiz.pdb
+F:\Arun\My_Projects\WatchList\WatchList\WatchListBiz\bin\Debug\Microsoft.IdentityModel.Extensions.dll
 F:\Arun\My_Projects\WatchList\WatchList\WatchListBiz\bin\Debug\WatchListDataLayer.dll
 F:\Arun\My_Projects\WatchList\WatchList\WatchListBiz\bin\Debug\WatchListDTOs.dll
 F:\Arun\My_Projects\WatchList\WatchList\WatchListBiz\bin\Debug\Newtonsoft.Json.dll
@@ -11,3 +12,9 @@ F:\Arun\My_Projects\WatchList\WatchList\WatchListBiz\obj\Debug\WatchListBiz.cspr
 F:\Arun\My_Projects\WatchList\WatchList\WatchListBiz\obj\Debug\WatchListBiz.csproj.CopyComplete
 F:\Arun\My_Projects\WatchList\WatchList\WatchListBiz\obj\Debug\WatchListBiz.dll
 F:\Arun\My_Projects\WatchList\WatchList\WatchListBiz\obj\Debug\WatchListBiz.pdb
+F:\Arun\My_Projects\WatchList\WatchList\WatchListBiz\bin\Debug\microsoft.identitymodel.dll
+F:\Arun\My_Projects\WatchList\WatchList\WatchListBiz\bin\Debug\Microsoft.IdentityModel.Tokens.dll
+F:\Arun\My_Projects\WatchList\WatchList\WatchListBiz\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
+F:\Arun\My_Projects\WatchList\WatchList\WatchListBiz\bin\Debug\Microsoft.IdentityModel.Tokens.xml
+F:\Arun\My_Projects\WatchList\WatchList\WatchListBiz\bin\Debug\System.IdentityModel.Tokens.Jwt.pdb
+F:\Arun\My_Projects\WatchList\WatchList\WatchListBiz\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
