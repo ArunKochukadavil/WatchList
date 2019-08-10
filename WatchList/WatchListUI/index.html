@@ -6,12 +6,18 @@
     <title>TypeScript HTML App</title>
     <link href="style/index.css" rel="stylesheet" />
     <script src="app.js"></script>
+    <script src="scripts/jquery-3.4.1.min.js"></script>
+    <script src="Models/UserCredentials.js"></script>
+    <script src="Constants.js"></script>
 </head>
 <body>
+    <script>
+        var login=new Login();
+    </script>
     <h1 id="headerTag">Welcome to WatchList</h1>
     <p id="desc"><i>The one stop destination to store all the <u style="color: red;">last watch history</u></i></p>
-    <form method="post" action="">
-        <h1>Login Panel</h1><span><hr></span>
+    <form method="get" action="Dashboard.html" onsubmit="return login.authenticateUser()" id="loginForm">
+        <h1>Login Panel</h1><hr>
         <table id="loginTable">
             <tr>
                 <td><label for="username" id="user1" >Username:</label></td>

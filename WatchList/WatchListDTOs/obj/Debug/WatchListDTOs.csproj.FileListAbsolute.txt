@@ -1,0 +1,9 @@
+F:\Arun\My_Projects\WatchList\WatchList\WatchListDTOs\bin\Debug\WatchListDTOs.dll
+F:\Arun\My_Projects\WatchList\WatchList\WatchListDTOs\bin\Debug\WatchListDTOs.pdb
+F:\Arun\My_Projects\WatchList\WatchList\WatchListDTOs\bin\Debug\Newtonsoft.Json.dll
+F:\Arun\My_Projects\WatchList\WatchList\WatchListDTOs\bin\Debug\Newtonsoft.Json.xml
+F:\Arun\My_Projects\WatchList\WatchList\WatchListDTOs\obj\Debug\WatchListDTOs.csproj.CoreCompileInputs.cache
+F:\Arun\My_Projects\WatchList\WatchList\WatchListDTOs\obj\Debug\WatchListDTOs.csproj.CopyComplete
+F:\Arun\My_Projects\WatchList\WatchList\WatchListDTOs\obj\Debug\WatchListDTOs.dll
+F:\Arun\My_Projects\WatchList\WatchList\WatchListDTOs\obj\Debug\WatchListDTOs.pdb
+F:\Arun\My_Projects\WatchList\WatchList\WatchListDTOs\obj\Debug\WatchListDTOs.csprojAssemblyReference.cache

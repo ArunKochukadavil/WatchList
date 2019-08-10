@@ -65,11 +65,18 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app.css" />
+    <Content Include="Dashboard.html" />
+    <Content Include="scripts\bootstrap-4.3.1.min.js" />
+    <Content Include="scripts\jquery-3.4.1.min.js" />
+    <Content Include="style\bootstrap-4.3.1.min.css" />
+    <Content Include="style\index.css" />
     <Content Include="index.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="app.ts" />
+    <TypeScriptCompile Include="Constants.ts" />
+    <TypeScriptCompile Include="Models\UserCredentials.ts" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />

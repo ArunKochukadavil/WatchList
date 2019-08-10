@@ -45,6 +45,7 @@
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -85,6 +86,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\UserAuthController.cs" />
+    <Compile Include="Controllers\WatchDataController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -101,8 +104,17 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
     <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WatchListBiz\WatchListBiz.csproj">
+      <Project>{6DEE7522-43BE-4D04-8296-52A33827A9AC}</Project>
+      <Name>WatchListBiz</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WatchListDTOs\WatchListDTOs.csproj">
+      <Project>{B066502B-8404-4EE2-95D0-4E6C8A625DAE}</Project>
+      <Name>WatchListDTOs</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
