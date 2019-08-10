@@ -5,6 +5,7 @@ using WatchListDTOs;
 
 namespace WatchList.Controllers
 {
+    [AllowAnonymous]
     [RoutePrefix("Auth")]
     public class UserAuthController : ApiController
     {
