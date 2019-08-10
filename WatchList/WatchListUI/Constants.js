@@ -7,6 +7,8 @@ var WatchListConstants;
             }
             Selector.userID = "#uid";
             Selector.pass = "#pass";
+            Selector.loginSubmitBTN = "#LoginSubmitBTN";
+            Selector.loginErrorMessage = "#LoginErrorMessage";
             return Selector;
         }());
         ControlConstants.Selector = Selector;

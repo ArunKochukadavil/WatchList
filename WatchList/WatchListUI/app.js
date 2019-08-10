@@ -3,9 +3,17 @@
 var Login = /** @class */ (function () {
     function Login() {
     }
-    Login.prototype.authenticateUser = function () {
-        var userName = $('#uid').val().toString();
-        var password = $('#pass').val().toString();
+    Login.prototype.init = function () {
+        Login.initializeEvents();
+    };
+    Login.initializeEvents = function () {
+        $(WatchListConstants.ControlConstants.Selector.loginSubmitBTN).bind('click', function () {
+            Login.authenticateUser();
+        });
+    };
+    Login.authenticateUser = function () {
+        var userName = $(WatchListConstants.ControlConstants.Selector.userID).val().toString();
+        var password = $(WatchListConstants.ControlConstants.Selector.pass).val().toString();
         var userData = new UserCredentials();
         userData.uid = userName;
         userData.pass = password;
@@ -17,14 +25,13 @@ var Login = /** @class */ (function () {
             contentType: 'application/json',
             data: JSON.stringify(userData),
             success: function (data, textStatus, jQxhr) {
-                data = JSON.parse(data);
                 if (data.IsSucceed) {
-                    $(document).ready(function () {
-                        $("#loginForm").submit();
-                    });
+                    $(WatchListConstants.ControlConstants.Selector.loginErrorMessage).css("display", "none");
+                    window.location.href = "Dashboard.html";
                 }
-                else
-                    alert("Invalid Credentials");
+                else {
+                    $(WatchListConstants.ControlConstants.Selector.loginErrorMessage).css("display", "block");
+                }
             },
             error: function (jqXhr, textStatus, errorThrown) {
                 console.log(errorThrown);
