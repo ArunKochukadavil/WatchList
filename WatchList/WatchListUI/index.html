@@ -16,7 +16,7 @@
     </script>
     <h1 id="headerTag">Welcome to WatchList</h1>
     <p id="desc"><i>The one stop destination to store all the <u style="color: red;">last watch history</u></i></p>
-    <form method="get" action="Dashboard.html" onsubmit="return login.authenticateUser()" id="loginForm">
+    <form method="GET" action="#" onsubmit="return false;" id="loginForm">
         <h1>Login Panel</h1><hr>
         <table id="loginTable">
             <tr>
@@ -29,9 +29,18 @@
             </tr>
             <tr>
                 <td></td>
-                <td><input type="submit" name="Login" value="Login"></td>
+                <td><input type="submit" name="Login" value="Login" id="LoginSubmitBTN"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><span id="LoginErrorMessage" style="display: none">Invalid credentials please try again</span></td>
             </tr>
         </table>
     </form>
+    <script>
+        $(document).ready(function () {
+            var login = new Login();
+            login.init();
+        });
+    </script>
 </body>
 </html>

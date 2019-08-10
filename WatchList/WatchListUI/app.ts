@@ -1,9 +1,19 @@
 ﻿/// <reference path="Constants.ts"/>
 /// <reference path="Models/UserCredentials.ts"/>
 class Login {
-    authenticateUser(): boolean {
-        var userName:string = $('#uid').val().toString();
-        var password: string = $('#pass').val().toString();
+    init() : void{
+        Login.initializeEvents();
+    }
+
+    static initializeEvents() : void{
+        $(WatchListConstants.ControlConstants.Selector.loginSubmitBTN).bind('click',function(){
+            Login.authenticateUser();
+        });
+    }
+
+    static authenticateUser(): boolean {
+        var userName:string = $(WatchListConstants.ControlConstants.Selector.userID).val().toString();
+        var password: string = $(WatchListConstants.ControlConstants.Selector.pass).val().toString();
         var userData: UserCredentials = new UserCredentials();
         userData.uid = userName;
         userData.pass = password;
@@ -15,15 +25,14 @@ class Login {
             contentType: 'application/json',
             data: JSON.stringify(userData),
             success: function (data, textStatus, jQxhr) {
-                data = JSON.parse(data);
                 if (data.IsSucceed)
                 {
-                    $(document).ready(function () {
-                        $("#loginForm").submit();
-                    });
+                    $(WatchListConstants.ControlConstants.Selector.loginErrorMessage).css("display","none");
+                    window.location.href = "Dashboard.html";
+                } else{
+                    $(WatchListConstants.ControlConstants.Selector.loginErrorMessage).css("display","block");
                 }
-                else
-                    alert("Invalid Credentials");
+                
             },
             error: function( jqXhr, textStatus, errorThrown ){
                 console.log( errorThrown );
