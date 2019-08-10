@@ -101,6 +101,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="AuthHandler\JWTokenHolder.cs" />
     <Compile Include="AuthHandler\UserAuthCheck.cs" />
     <Compile Include="Controllers\UserAuthController.cs" />
     <Compile Include="Controllers\WatchDataController.cs" />

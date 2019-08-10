@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Web.Http;
+using WatchList.AuthHandler;
 using WatchListBiz;
 using WatchListDTOs;
 
@@ -15,7 +16,9 @@ namespace WatchList.Controllers
         {
             try
             {
-                return Ok(UserAuthBiz.VerifyUser(userAuthData));
+                var result = UserAuthBiz.VerifyUser(userAuthData);
+                JWTokenHolder.tokenHolder.Add(result.Messages[0], Constants.JWTTokenKey.LoggedIn);
+                return Ok(result);
             }
             catch(Exception ex)
             {

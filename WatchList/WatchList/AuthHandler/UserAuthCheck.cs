@@ -7,6 +7,7 @@ namespace WatchList.AuthHandler
     {
         protected override bool IsAuthorized(HttpActionContext actionContext)
         {
+            var httpRequestHeader = actionContext.Request.Headers.GetValues("Authorization");
             return true;
         }
     }
