@@ -1,10 +1,175 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <title></title>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="style/bootstrap-4.3.1.min.css">
+    <script src="scripts/bootstrap-4.3.1.min.js"></script>
+    <script src="scripts/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+        document.getElementById('dashboard').focus();
+    </script>
+    <style>
+        body {
+            margin: 0;
+            font-family: "Lato", sans-serif;
+        }
+        .sidebar {
+            margin: 0;
+            padding: 0;
+            width: 300px;
+            background-color:darkmagenta;
+            position: fixed;
+            height: 100%;
+            overflow: auto;
+        }
+        .sidebar a {
+            display: block;
+            color: white;
+            padding: 16px;
+            text-decoration: none;
+        }
+        .sidebar a.active {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .sidebar a:hover:not(.active) {
+            background-color: blue;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 10px;
+        }
+        div.content {
+            margin-left: 200px;
+            padding: 1px 16px;
+            height: 1000px;
+        }
+        @media screen and (max-width: 700px) {
+        .sidebar {
+            width:300px;
+            height: 100%;
+            position: fixed;
+            overflow: auto;
+            }
+        }
+        @media screen and (max-width: 400px) {
+            .sidebar{
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+            .sidebar a {
+                text-align: center;
+                float: none;
+            }           
+            #view_data{
+                text-align:center;
+                margin-left:50px;
+                padding-top:25px;
+                padding-left:20px;
+                padding-right: 20px;
+            }
+        }
+        #user_icon{
+            font-size: 60px;
+            color: white;
+            margin-top: 50px;
+            margin-left:90px;
+            background-color: blue;
+            padding: 20px;
+            border-radius: 100px;
+        }
+        #dash_icon,#add_icon,#edit_icon,#share_icon,#sign_out_icon{
+            font-size:20px;
+        }
+        #welcome{
+            font-weight: bold;
+            color: white;
+            margin-top: 15px;
+            margin-left:76px;   
+        }
+        #dashboard{
+            margin-top:50px;
+        }
+        #view_data{
+            text-align: center;
+            margin-left: 300px;
+            padding-top:25px;
+            padding-left:20px;
+            padding-right: 20px;
+        }
+        thead{
+            background-color: brown;
+            color:white;
+            font-weight: bold;
+        }
+        table{
+            background-color: silver;
+        }
+        .checked {
+            color: orange;
+        }   
+    </style>
 </head>
 <body>
-    Welcome
+    <div class="sidebar">
+        <i class="material-icons" id="user_icon">person</i>
+        <p id="welcome">Welcome, User1</p>
+        <a id="dashboard" href="#">
+            <i class="material-icons" id="dash_icon">dashboard</i> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Dashboard
+        </a>
+        <a id="add">
+            <i class="material-icons" id="add_icon">add</i> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Add
+        </a>
+        <a id="edit">
+            <i class="material-icons" id="edit_icon">edit</i>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Edit
+        </a>
+        <a id="share">
+            <i class="material-icons" id="share_icon">share</i>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Share
+        </a>
+        <a id="sign_out">
+            <i class="material-icons" id="sign_out_icon">logout</i>    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Sign out
+        </a>
+    </div>
+    <div id="view_data" class="container">
+        <table id="table_data" class="table table-bordered table-responsive">
+            <thead>
+                <tr>
+                    <th>Sr.No</th>
+                    <th>Name</th>
+                    <th>Genre</th>
+                    <th>Season</th>
+                    <th>Episodes Completed</th>
+                    <th>Total Episodes</th>
+                    <th>Status</th>
+                    <th>Review</th>
+                    <th>Link</th>
+                    <th>Share<input type="checkbox" onchange="checkAll(this)" name="chk[]"></th>
+                </tr>
+            </thead>
+            <tbody>  
+                <tr>
+                    <td>1</td>
+                    <td>Game Of Thrones</td>
+                    <td>Adventure</td>
+                    <td>2</td>
+                    <td>15</td>
+                    <td>30</td>
+                    <td>Ongoing</td>
+                    <td>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                    </td>
+                    <td>https://www.example.com/got/season/2/index.html</td>
+                    <td><input type="checkbox"></td>
+                </tr>        
+            </tbody>
+        </table>
+    </div>
 </body>
 </html>
