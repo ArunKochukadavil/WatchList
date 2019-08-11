@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="style/bootstrap-4.3.1.min.css">
     <script src="scripts/bootstrap-4.3.1.min.js"></script>
     <script src="scripts/jquery-3.4.1.min.js"></script>
+    <script src="Dashboard.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script>
         document.getElementById('dashboard').focus();
@@ -114,6 +115,12 @@
     </style>
 </head>
 <body>
+    <script>
+        $(document).ready(function(){
+            var dashboard =new Dashboard();
+            dashboard.init();
+        });
+    </script>
     <div class="sidebar">
         <i class="material-icons" id="user_icon">person</i>
         <p id="welcome">Welcome, User1</p>
