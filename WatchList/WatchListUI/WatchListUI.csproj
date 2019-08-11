@@ -76,6 +76,7 @@
   <ItemGroup>
     <TypeScriptCompile Include="app.ts" />
     <TypeScriptCompile Include="Constants.ts" />
+    <TypeScriptCompile Include="Dashboard.ts" />
     <TypeScriptCompile Include="Models\UserCredentials.ts" />
   </ItemGroup>
   <ItemGroup>

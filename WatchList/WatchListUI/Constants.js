@@ -9,6 +9,8 @@ var WatchListConstants;
             Selector.pass = "#pass";
             Selector.loginSubmitBTN = "#LoginSubmitBTN";
             Selector.loginErrorMessage = "#LoginErrorMessage";
+            Selector.dashboardWatchListDataTable = "#table_data";
+            Selector.loader = "#loader";
             return Selector;
         }());
         ControlConstants.Selector = Selector;

@@ -11,8 +11,20 @@
     <script src="Constants.js"></script>
 </head>
 <body>
+    <div id="loader">
+        <div class="cv-spinner">
+            <span class="spinner"></span>
+        </div>
+    </div>
     <script>
         var login=new Login();
+        $(document).ajaxStart(function(){
+            $(WatchListConstants.ControlConstants.Selector.loader).css('display','block');
+        });
+        $(document).ajaxComplete(function(){
+        // Hide image container
+            $(WatchListConstants.ControlConstants.Selector.loader).css('display','none');
+        });
     </script>
     <h1 id="headerTag">Welcome to WatchList</h1>
     <p id="desc"><i>The one stop destination to store all the <u style="color: red;">last watch history</u></i></p>
