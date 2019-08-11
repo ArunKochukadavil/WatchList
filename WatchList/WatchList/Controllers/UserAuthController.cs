@@ -17,7 +17,10 @@ namespace WatchList.Controllers
             try
             {
                 var result = UserAuthBiz.VerifyUser(userAuthData);
-                JWTokenHolder.tokenHolder.Add(result.Messages[0], Constants.JWTTokenKey.LoggedIn);
+                if(!JWTokenHolder.tokenHolder.ContainsKey(userAuthData.UID))
+                {
+                    JWTokenHolder.tokenHolder.Add(userAuthData.UID, Constants.JWTTokenKey.LoggedIn);
+                }
                 return Ok(result);
             }
             catch(Exception ex)
