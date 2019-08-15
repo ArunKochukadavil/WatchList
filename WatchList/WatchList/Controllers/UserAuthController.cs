@@ -37,5 +37,39 @@ namespace WatchList.Controllers
                 });
             }
         }
+
+        /// <summary>
+        /// api for creating user
+        /// </summary>
+        /// <param name="userAuthData">credentials for new user</param>
+        /// <returns></returns>
+        [HttpPost]
+        [Route("User/Create")]
+        public IHttpActionResult CreateUser(UserAuthData userAuthData)
+        {
+            try
+            {
+                return Ok(UserAuthBiz.CreateUser(userAuthData));
+            }
+            catch(Exception ex)
+            {
+                if (ex.Message.Contains("Violation of PRIMARY KEY constraint 'PK_UserAuthData'. Cannot insert duplicate key"))
+                {
+                    return Ok(new Result()
+                    {
+                        IsSucceed = false,
+                        Messages = new System.Collections.Generic.List<string>()
+                        {
+                            "User already exists"
+                        }
+                    });
+                }
+                return Ok(new Result()
+                {
+                    IsSucceed = false,
+                    Exception = ex
+                });
+            }
+        }
     }
 }

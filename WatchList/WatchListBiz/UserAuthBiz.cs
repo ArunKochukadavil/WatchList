@@ -33,5 +33,10 @@ namespace WatchListBiz
                 Messages = new List<string> { "Invalid Credentials" }
             };
         }
+
+        public static Result CreateUser(UserAuthData userAuthData)
+        {
+            return new UserAuthDataRepo().AddUser(userAuthData);
+        }
     }
 }

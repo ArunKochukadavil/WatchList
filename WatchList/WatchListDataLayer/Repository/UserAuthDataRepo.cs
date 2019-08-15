@@ -52,5 +52,35 @@ namespace WatchListDataLayer.Repository
                 connection.Close();
             }
         }
+
+        public Result AddUser(UserAuthData userAuthData)
+        {
+            try
+            {
+                cmd.Parameters.Add("@uid", SqlDbType.NVarChar).Value = userAuthData.UID;
+                cmd.Parameters.Add("@pass", SqlDbType.NVarChar).Value = userAuthData.Password;
+                cmd.CommandText = "CreateUser";
+                cmd.Connection = connection;
+                cmd.CommandType = CommandType.StoredProcedure;
+                connection.Open();
+                int rowsEffected = cmd.ExecuteNonQuery();
+                if(rowsEffected>0)
+                {
+                    return new Result()
+                    {
+                        IsSucceed = true
+                    };
+                }
+                return new Result()
+                {
+                    IsSucceed = false
+                };
+            }
+            finally
+            {
+                cmd.Dispose();
+                connection.Close();
+            }
+        }
     }
 }
