@@ -9,6 +9,7 @@
     <script src="scripts/jquery-3.4.1.min.js"></script>
     <script src="Models/UserCredentials.js"></script>
     <script src="Constants.js"></script>
+    <script src="Models/Result.js"></script>
 </head>
 <body>
     <div id="loader">
@@ -49,43 +50,6 @@
         </table>
     </form>
 
-    <!-- Modal -->
-    <div class="modal fade" id="myModal" role="dialog">
-        <div class="modal-dialog">
-            <!-- Modal content-->
-            <form method="GET" action="#" onsubmit="return false;" id="SignupForm"></form>
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title">Modal Header</h4>
-                    </div>
-                    
-                        <div class="modal-body">
-                            <h1>Registration Form</h1>
-                            <table>
-                                <tr>
-                                    <td><label for="registrationUsername" >Username:</label></td>
-                                    <td><input type="text" name="username" placeholder="Email Id" id="registrationUID"></td>
-                                </tr>
-                                <tr>
-                                    <td><label for="registrationPassword" >Password:</label></td>
-                                    <td><input type="password" name="password" placeholder="Password" id="registrationPass"></td>
-                                </tr>
-                                <tr>
-                                    <td><label for="confirmPassword" >Password:</label></td>
-                                    <td><input type="password" name="password" placeholder="Password" id="confirmPassword"></td>
-                                </tr>
-                            </table>
-                        </div>             
-                        <div class="modal-footer">
-                            <button type="submit" class="btn btn-default">Register</button>
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        </div>
-                    
-                </div>
-            </form>
-        </div>
-    </div>
 
     <script>
         $(document).ready(function () {
