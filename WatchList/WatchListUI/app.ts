@@ -1,10 +1,12 @@
 ﻿/// <reference path="Constants.ts"/>
 /// <reference path="Models/UserCredentials.ts"/>
+/// <reference path="Models/Result.ts"/>
+
 class Login {
     init() : void{
         Login.initializeEvents();
     }
-
+    static result: Result;
     static initializeEvents() : void{
         $(WatchListConstants.ControlConstants.Selector.loginSubmitBTN).bind('click',function(){
             Login.authenticateUser();
@@ -27,10 +29,12 @@ class Login {
             success: function (data, textStatus, jQxhr) {
                 if (data.IsSucceed)
                 {
-                    $(WatchListConstants.ControlConstants.Selector.loginErrorMessage).css("display","none");
+                    Login.result = data; 
+                    $(WatchListConstants.ControlConstants.Selector.loginErrorMessage).hide();
+                    localStorage.setItem('watchListSecureToken',Login.result.Messages[0])
                     window.location.href = "Dashboard.html";
                 } else{
-                    $(WatchListConstants.ControlConstants.Selector.loginErrorMessage).css("display","block");
+                    $(WatchListConstants.ControlConstants.Selector.loginErrorMessage).show();
                 }
                 
             },

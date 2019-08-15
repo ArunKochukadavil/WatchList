@@ -1,11 +1,11 @@
 ﻿USE [TvWebAnimeProgressDB]
 GO
 
-/****** Object:  Table [dbo].[UserAuthData]    Script Date: 02-08-2019 17:36:24 ******/
+/****** Object:  Table [dbo].[UserAuthData]    Script Date: 15-08-2019 20:09:59 ******/
 DROP TABLE [dbo].[UserAuthData]
 GO
 
-/****** Object:  Table [dbo].[UserAuthData]    Script Date: 02-08-2019 17:36:24 ******/
+/****** Object:  Table [dbo].[UserAuthData]    Script Date: 15-08-2019 20:09:59 ******/
 SET ANSI_NULLS ON
 GO
 

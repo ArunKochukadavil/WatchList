@@ -76,7 +76,10 @@
   <ItemGroup>
     <TypeScriptCompile Include="app.ts" />
     <TypeScriptCompile Include="Constants.ts" />
+    <TypeScriptCompile Include="Dashboard.ts" />
+    <TypeScriptCompile Include="Models\Result.ts" />
     <TypeScriptCompile Include="Models\UserCredentials.ts" />
+    <TypeScriptCompile Include="Models\WatchData.ts" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />

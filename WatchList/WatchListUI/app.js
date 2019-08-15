@@ -1,5 +1,6 @@
 /// <reference path="Constants.ts"/>
 /// <reference path="Models/UserCredentials.ts"/>
+/// <reference path="Models/Result.ts"/>
 var Login = /** @class */ (function () {
     function Login() {
     }
@@ -26,11 +27,13 @@ var Login = /** @class */ (function () {
             data: JSON.stringify(userData),
             success: function (data, textStatus, jQxhr) {
                 if (data.IsSucceed) {
-                    $(WatchListConstants.ControlConstants.Selector.loginErrorMessage).css("display", "none");
+                    Login.result = data;
+                    $(WatchListConstants.ControlConstants.Selector.loginErrorMessage).hide();
+                    localStorage.setItem('watchListSecureToken', Login.result.Messages[0]);
                     window.location.href = "Dashboard.html";
                 }
                 else {
-                    $(WatchListConstants.ControlConstants.Selector.loginErrorMessage).css("display", "block");
+                    $(WatchListConstants.ControlConstants.Selector.loginErrorMessage).show();
                 }
             },
             error: function (jqXhr, textStatus, errorThrown) {

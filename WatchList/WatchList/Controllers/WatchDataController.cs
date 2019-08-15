@@ -17,8 +17,11 @@ namespace WatchList.Controllers
         [Route("Get")]
         [UserAuthCheck]
         [HttpGet]
-        public IHttpActionResult GetWatchData(string uid)
+        public IHttpActionResult GetWatchData()
         {
+            var token = Request.Headers.Authorization.Parameter.Split()[0];
+            string uid="";
+            TokenHandler.DecryptJWT(token, out uid);
             try
             {
                 return Ok(WatchData.GetWatchData(uid));

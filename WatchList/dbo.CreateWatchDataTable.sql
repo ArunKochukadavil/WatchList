@@ -4,11 +4,11 @@ GO
 ALTER TABLE [dbo].[WatchData] DROP CONSTRAINT [FK__WatchData__uid__693CA210]
 GO
 
-/****** Object:  Table [dbo].[WatchData]    Script Date: 04-08-2019 01:00:34 ******/
+/****** Object:  Table [dbo].[WatchData]    Script Date: 15-08-2019 20:10:19 ******/
 DROP TABLE [dbo].[WatchData]
 GO
 
-/****** Object:  Table [dbo].[WatchData]    Script Date: 04-08-2019 01:00:34 ******/
+/****** Object:  Table [dbo].[WatchData]    Script Date: 15-08-2019 20:10:19 ******/
 SET ANSI_NULLS ON
 GO
 

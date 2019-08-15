@@ -3,9 +3,13 @@
 <head>
     <title>Dashboard</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="scripts/jquery-3.4.1.min.js"></script>
     <link rel="stylesheet" href="style/bootstrap-4.3.1.min.css">
     <script src="scripts/bootstrap-4.3.1.min.js"></script>
-    <script src="scripts/jquery-3.4.1.min.js"></script>
+    <script src="Dashboard.js"></script>
+    <script src="Constants.js"></script>
+    <script src="Models/Result.js"></script>
+    <script src="Models/WatchData.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script>
         document.getElementById('dashboard').focus();
@@ -33,102 +37,133 @@
             margin: 0;
             font-family: "Lato", sans-serif;
         }
+
         .sidebar {
             margin: 0;
             padding: 0;
             width: 300px;
-            background-color:darkmagenta;
+            background-color: darkmagenta;
             position: fixed;
             height: 100%;
             overflow: auto;
         }
-        .sidebar a {
-            display: block;
-            color: white;
-            padding: 16px;
-            text-decoration: none;
-        }
-        .sidebar a.active {
-            background-color: #4CAF50;
-            color: white;
-        }
-        .sidebar a:hover:not(.active) {
-            background-color: blue;
-            color: white;
-            cursor: pointer;
-            font-weight: bold;
-            border-radius: 10px;
-        }
+
+            .sidebar a {
+                display: block;
+                color: white;
+                padding: 16px;
+                text-decoration: none;
+            }
+
+                .sidebar a.active {
+                    background-color: #4CAF50;
+                    color: white;
+                }
+
+                .sidebar a:hover:not(.active) {
+                    background-color: blue;
+                    color: white;
+                    cursor: pointer;
+                    font-weight: bold;
+                    border-radius: 10px;
+                }
+
         div.content {
             margin-left: 200px;
             padding: 1px 16px;
             height: 1000px;
         }
+
         @media screen and (max-width: 700px) {
-        .sidebar {
-            width:300px;
-            height: 100%;
-            position: fixed;
-            overflow: auto;
+            .sidebar {
+                width: 300px;
+                height: 100%;
+                position: fixed;
+                overflow: auto;
             }
         }
+
         @media screen and (max-width: 400px) {
-            .sidebar{
+            .sidebar {
                 width: 100%;
                 height: auto;
                 position: relative;
             }
-            .sidebar a {
+
+                .sidebar a {
+                    text-align: center;
+                    float: none;
+                }
+
+            #view_data {
                 text-align: center;
-                float: none;
-            }           
-            #view_data{
-                text-align:center;
-                margin-left:50px;
-                padding-top:25px;
-                padding-left:20px;
+                margin-left: 50px;
+                padding-top: 25px;
+                padding-left: 20px;
                 padding-right: 20px;
             }
         }
-        #user_icon{
+
+        #user_icon {
             font-size: 60px;
             color: white;
             margin-top: 50px;
-            margin-left:90px;
+            margin-left: 90px;
             background-color: blue;
             padding: 20px;
             border-radius: 100px;
         }
-        #dash_icon,#add_icon,#edit_icon,#share_icon,#sign_out_icon{
-            font-size:20px;
+
+        #dash_icon, #add_icon, #edit_icon, #share_icon, #sign_out_icon {
+            font-size: 20px;
         }
-        #welcome{
+
+        #welcome {
             font-weight: bold;
             color: white;
             margin-top: 15px;
-            margin-left:76px;   
+            margin-left: 76px;
         }
-        #dashboard{
-            margin-top:50px;
+
+        #dashboard {
+            margin-top: 50px;
         }
-        #view_data{
+
+        #view_data {
             text-align: center;
             margin-left: 300px;
-            padding-top:25px;
-            padding-left:20px;
+            padding-top: 25px;
+            padding-left: 20px;
             padding-right: 20px;
         }
-        thead{
+
+        thead {
             background-color: brown;
-            color:white;
+            color: white;
             font-weight: bold;
         }
-        table{
+
+        table {
             background-color: silver;
         }
+
         .checked {
             color: orange;
-        }   
+        }
+
+        tbody {
+            counter-reset: rowNumber;
+        }
+
+            tbody > tr {
+                counter-increment: rowNumber;
+            }
+
+            tbody > tr:before {
+                content: counter(rowNumber);
+                min-width: 1em;
+                margin-right: 0.5em;
+            }
     </style>
 </head>
 <body>
@@ -138,7 +173,7 @@
         <a id="dashboard" href="#">
             <i class="material-icons" id="dash_icon">dashboard</i> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Dashboard
         </a>
-        <a id="add" onclick="add();">
+        <a id="add">
             <i class="material-icons" id="add_icon">add</i> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Add
         </a>
         <a id="edit">
@@ -152,7 +187,7 @@
         </a>
     </div>
     <div id="view_data" class="container">
-        <table id="table_data" class="table table-bordered table-responsive">
+        <table id="watchDataTable" class="table table-bordered  ">
             <thead>
                 <tr>
                     <th>Sr.No</th>
@@ -167,9 +202,8 @@
                     <th>Share<input type="checkbox" onchange="checkAll(this)" name="chk[]"></th>
                 </tr>
             </thead>
-            <tbody>  
-                <tr>
-                    <td>1</td>
+            <tbody id='watchDataTableBody'>
+                <!--<tr>
                     <td>Game Of Thrones</td>
                     <td>Adventure</td>
                     <td>2</td>
@@ -185,10 +219,16 @@
                     </td>
                     <td>https://www.example.com/got/season/2/index.html</td>
                     <td><input type="checkbox"></td>
-                </tr>        
+                </tr>-->
             </tbody>
         </table>
     </div>
-   
+    <script>
+        document.getElementById('dashboard').focus();
+        $(document).ready(function () {
+            var dashboard = new Dashboard();
+            dashboard.init();
+        });
+    </script>
 </body>
 </html>

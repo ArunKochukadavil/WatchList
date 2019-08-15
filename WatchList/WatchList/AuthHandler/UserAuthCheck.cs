@@ -1,5 +1,8 @@
-﻿using System.Web.Http;
+﻿using System.Collections.Generic;
+using System.IdentityModel.Tokens.Jwt;
+using System.Web.Http;
 using System.Web.Http.Controllers;
+using WatchListBiz;
 
 namespace WatchList.AuthHandler
 {
@@ -7,8 +10,16 @@ namespace WatchList.AuthHandler
     {
         protected override bool IsAuthorized(HttpActionContext actionContext)
         {
-            var httpRequestHeader = actionContext.Request.Headers.GetValues("Authorization");
-            return true;
+            try
+            {
+                var token = actionContext.Request.Headers.Authorization.Parameter.Split()[0];
+                string uid;
+                return TokenHandler.DecryptJWT(token, out uid);
+            }
+            catch
+            {
+                return false;
+            }
         }
     }
 }
