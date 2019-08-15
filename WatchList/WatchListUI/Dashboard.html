@@ -9,6 +9,24 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script>
         document.getElementById('dashboard').focus();
+        function checkAll(ele) {
+            var checkboxes = document.getElementsByTagName('input');
+            if (ele.checked) {
+                for (var i = 0; i < checkboxes.length; i++) {
+                    if (checkboxes[i].type == 'checkbox') {
+                        checkboxes[i].checked = true;
+                    }
+                }
+            } 
+            else {
+                for (var i = 0; i < checkboxes.length; i++) {
+                    console.log(i)
+                    if (checkboxes[i].type == 'checkbox') {
+                        checkboxes[i].checked = false;
+                    }
+                }
+            }
+        }
     </script>
     <style>
         body {
@@ -120,7 +138,7 @@
         <a id="dashboard" href="#">
             <i class="material-icons" id="dash_icon">dashboard</i> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Dashboard
         </a>
-        <a id="add">
+        <a id="add" onclick="add();">
             <i class="material-icons" id="add_icon">add</i> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Add
         </a>
         <a id="edit">
@@ -171,5 +189,6 @@
             </tbody>
         </table>
     </div>
+   
 </body>
 </html>
