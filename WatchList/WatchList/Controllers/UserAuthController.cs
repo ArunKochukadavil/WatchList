@@ -10,6 +10,11 @@ namespace WatchList.Controllers
     [RoutePrefix("Auth")]
     public class UserAuthController : ApiController
     {
+        /// <summary>
+        /// for authentication user and issuing token i.e JWT
+        /// </summary>
+        /// <param name="userAuthData">user credentials</param>
+        /// <returns></returns>
         [HttpPost]
         [Route("Login")]
         public IHttpActionResult UserLogin(UserAuthData userAuthData)
