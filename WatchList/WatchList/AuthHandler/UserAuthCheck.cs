@@ -12,15 +12,9 @@ namespace WatchList.AuthHandler
         {
             try
             {
-                var httpRequestHeader = actionContext.Request.Headers.Authorization.Parameter.Split()[0];
-                var handler = new JwtSecurityTokenHandler();
-                var token = handler.ReadJwtToken(httpRequestHeader);
-                object uid;
-                if (token.Payload.TryGetValue(Constants.JWTTokenKey.UserID, out uid))
-                {
-                    return true;
-                }
-                return false;
+                var token = actionContext.Request.Headers.Authorization.Parameter.Split()[0];
+                string uid;
+                return TokenHandler.DecryptJWT(token, out uid);
             }
             catch
             {
