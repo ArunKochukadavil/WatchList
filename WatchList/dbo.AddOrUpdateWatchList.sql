@@ -1,18 +1,16 @@
 ﻿USE [TvWebAnimeProgressDB]
 GO
 
-/****** Object:  StoredProcedure [dbo].[AddOrUpdateWatchList]    Script Date: 04-08-2019 01:01:59 ******/
+/****** Object:  StoredProcedure [dbo].[AddOrUpdateWatchList]    Script Date: 15-08-2019 20:07:17 ******/
 DROP PROCEDURE [dbo].[AddOrUpdateWatchList]
 GO
 
-/****** Object:  StoredProcedure [dbo].[AddOrUpdateWatchList]    Script Date: 04-08-2019 01:01:59 ******/
+/****** Object:  StoredProcedure [dbo].[AddOrUpdateWatchList]    Script Date: 15-08-2019 20:07:17 ******/
 SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER ON
 GO
-
-
 
 CREATE PROCEDURE [dbo].[AddOrUpdateWatchList]
 @id int,
@@ -23,9 +21,9 @@ CREATE PROCEDURE [dbo].[AddOrUpdateWatchList]
 @totalEpisodes INT,
 @episodesCompleted INT,
 @status VARCHAR(10),
-@reviews tinyint,
-@description text,
-@downloadLinks text
+@reviews tinyint = 0,
+@description text = '',
+@downloadLinks text = ''
 AS
 BEGIN
 	DECLARE @LastChangeDate AS DATETIME;
@@ -42,5 +40,6 @@ BEGIN
 			END
 	END
 END
-
 GO
+
+

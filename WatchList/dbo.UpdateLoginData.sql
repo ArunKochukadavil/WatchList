@@ -1,11 +1,11 @@
 ﻿USE [TvWebAnimeProgressDB]
 GO
 
-/****** Object:  StoredProcedure [dbo].[UpdateLoginData]    Script Date: 02-08-2019 18:56:11 ******/
+/****** Object:  StoredProcedure [dbo].[UpdateLoginData]    Script Date: 15-08-2019 20:11:25 ******/
 DROP PROCEDURE [dbo].[UpdateLoginData]
 GO
 
-/****** Object:  StoredProcedure [dbo].[UpdateLoginData]    Script Date: 02-08-2019 18:56:11 ******/
+/****** Object:  StoredProcedure [dbo].[UpdateLoginData]    Script Date: 15-08-2019 20:11:25 ******/
 SET ANSI_NULLS ON
 GO
 
